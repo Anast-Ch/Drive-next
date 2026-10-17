@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyProject">
         <activity
             android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        
+        <activity
+            android:name=".presentation.splash.SplashActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
