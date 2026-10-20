@@ -24,6 +24,15 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun navigateNext() {
+        val connectivityChecker = com.example.myproject.data.local.NetworkConnectivityChecker(this)
+
+        if (!connectivityChecker.isConnected()) {
+            val intent = Intent(this, com.example.myproject.presentation.no_connection.NoConnectionActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+
         val onboardingPreferences = OnboardingPreferences(this)
 
         val destination = if (onboardingPreferences.isOnboardingCompleted()) {
