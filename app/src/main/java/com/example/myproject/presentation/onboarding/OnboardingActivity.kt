@@ -14,6 +14,7 @@ class OnboardingActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager2
     private lateinit var btnNext: Button
+    private lateinit var btnSkip: Button
     private lateinit var dots: List<View>
     private lateinit var onboardingPreferences: OnboardingPreferences
 
@@ -24,7 +25,7 @@ class OnboardingActivity : AppCompatActivity() {
         onboardingPreferences = OnboardingPreferences(this)
 
         viewPager = findViewById(R.id.vpOnboarding)
-        val btnSkip = findViewById<Button>(R.id.btnSkip)
+        btnSkip = findViewById(R.id.btnSkip)
         btnNext = findViewById(R.id.btnNext)
         dots = listOf(
             findViewById(R.id.dot1),
@@ -83,6 +84,10 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun finishOnboarding() {
+        // Защита от двойного нажатия
+        btnNext.isEnabled = false
+        btnSkip.isEnabled = false
+
         onboardingPreferences.setOnboardingCompleted()
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)

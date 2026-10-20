@@ -12,4 +12,8 @@
     <string name="btn_skip">Пропустить</string>
     <string name="btn_next">Далее</string>
     <string name="btn_start">Поехали</string>
+    <string name="no_connection_title">Нет подключения к интернету</string>
+    <string name="no_connection_subtitle">Проверьте подключение и повторите попытку</string>
+    <string name="btn_retry">Повторить попытку</string>
+    <string name="no_connection_still_offline">Подключение всё ещё отсутствует</string>
 </resources>
