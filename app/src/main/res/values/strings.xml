@@ -1,6 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Drive next</string>
-
+    <string name="app_name">DriveNext</string>
     <string name="splash_title">DriveNext</string>
     <string name="splash_slogan">Поможем найти твою следующую поездку</string>
+    <string name="onboarding_title_1">Аренда автомобилей</string>
+    <string name="onboarding_subtitle_1">Открой для себя удобный и доступный способ передвижения</string>
+    <string name="onboarding_title_2">Безопасно и удобно</string>
+    <string name="onboarding_subtitle_2">Арендуй автомобиль и наслаждайся его удобством</string>
+    <string name="onboarding_title_3">Лучшие предложения</string>
+    <string name="onboarding_subtitle_3">Выбирай понравившееся среди сотен доступных автомобилей</string>
+    <string name="btn_skip">Пропустить</string>
+    <string name="btn_next">Далее</string>
+    <string name="btn_start">Поехали</string>
 </resources>

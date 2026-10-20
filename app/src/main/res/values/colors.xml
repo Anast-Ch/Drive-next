@@ -2,8 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
     <color name="splash_title_color">#2A1246</color>
     <color name="splash_subtitle_color">#B3000000</color>
-    <color name="text_secondary">#B3000000</color>
+    <color name="background_white">#FFFFFFFF</color>
+    <color name="onboarding_subtitle_color">#FF1A1A1A</color>
+    <color name="dot_active_color">#FF2A1246</color>
+    <color name="dot_inactive_color">#FFE4E7EC</color>
+    <color name="button_primary_background">#FF2A1246</color>
+    <color name="button_primary_text">#FFFFFFFF</color>
+    <color name="skip_button_text_color">#FF2A1246</color>
 </resources>
