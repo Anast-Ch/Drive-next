@@ -10,10 +10,12 @@
     <ImageView
         android:id="@+id/ivOnboardingImage"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/onboarding_image_height"
-        android:layout_marginTop="@dimen/onboarding_image_top_margin"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="32dp"
         android:contentDescription="@null"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/tvOnboardingTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,14 +27,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/onboarding_text_horizontal_margin"
-        android:layout_marginTop="@dimen/onboarding_title_top_margin"
         android:layout_marginEnd="@dimen/onboarding_text_horizontal_margin"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/montserrat_semibold"
         android:textColor="@color/black"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/tvOnboardingSubtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivOnboardingImage"
         tools:text="Аренда автомобилей" />
 
     <TextView
@@ -40,14 +42,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/onboarding_text_horizontal_margin"
-        android:layout_marginTop="@dimen/onboarding_subtitle_top_margin"
         android:layout_marginEnd="@dimen/onboarding_text_horizontal_margin"
+        android:layout_marginBottom="32dp"
         android:fontFamily="@font/montserrat_regular"
-        android:textColor="@color/onboarding_subtitle_color"
+        android:textColor="@color/text_primary_color"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvOnboardingTitle"
         tools:text="Открой для себя удобный и доступный способ передвижения" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

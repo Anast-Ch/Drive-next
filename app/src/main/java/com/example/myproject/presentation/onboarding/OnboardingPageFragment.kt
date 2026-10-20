@@ -19,12 +19,6 @@ class OnboardingPageFragment : Fragment(R.layout.fragment_onboarding_page) {
         private const val ARG_IMAGE_WIDTH_DP = "arg_image_width_dp"
         private const val ARG_IMAGE_OFFSET_DP = "arg_image_offset_dp"
 
-        /**
-         * fillWidth = true  -> картинка растягивается на всю ширину экрана (edge-to-edge),
-         *                      используется centerCrop, imageWidthDp/imageOffsetDp игнорируются.
-         * fillWidth = false -> картинка показывается по центру с заданной шириной и сдвигом,
-         *                      используется fitCenter.
-         */
         fun newInstance(
             imageRes: Int,
             title: String,
@@ -71,7 +65,7 @@ class OnboardingPageFragment : Fragment(R.layout.fragment_onboarding_page) {
         if (fillWidth) {
             params.width = ViewGroup.LayoutParams.MATCH_PARENT
             ivImage.layoutParams = params
-            ivImage.scaleType = ImageView.ScaleType.CENTER_CROP
+            ivImage.scaleType = ImageView.ScaleType.FIT_CENTER
             ivImage.translationX = 0f
         } else {
             params.width = context.dpToPx(imageWidthDp)

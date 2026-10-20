@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomBlock"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -44,10 +44,10 @@
         android:layout_height="@dimen/onboarding_bottom_block_height"
         android:layout_marginStart="@dimen/onboarding_bottom_block_horizontal_margin"
         android:layout_marginEnd="@dimen/onboarding_bottom_block_horizontal_margin"
-        android:layout_marginTop="@dimen/onboarding_bottom_block_top_margin"
+        android:layout_marginBottom="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:id="@+id/dotsContainer"
@@ -78,7 +78,6 @@
                 android:layout_width="@dimen/dot_width_inactive"
                 android:layout_height="@dimen/dot_height"
                 android:background="@drawable/dot_inactive" />
-
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -103,5 +102,4 @@
             app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
