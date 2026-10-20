@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <ImageView
+        android:id="@+id/ivOnboardingImage"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/onboarding_image_height"
+        android:layout_marginTop="@dimen/onboarding_image_top_margin"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_width="280dp"
+        tools:src="@drawable/img_onboarding_1" />
+
+    <TextView
+        android:id="@+id/tvOnboardingTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/onboarding_text_horizontal_margin"
+        android:layout_marginTop="@dimen/onboarding_title_top_margin"
+        android:layout_marginEnd="@dimen/onboarding_text_horizontal_margin"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivOnboardingImage"
+        tools:text="Аренда автомобилей" />
+
+    <TextView
+        android:id="@+id/tvOnboardingSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/onboarding_text_horizontal_margin"
+        android:layout_marginTop="@dimen/onboarding_subtitle_top_margin"
+        android:layout_marginEnd="@dimen/onboarding_text_horizontal_margin"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/onboarding_subtitle_color"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOnboardingTitle"
+        tools:text="Открой для себя удобный и доступный способ передвижения" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

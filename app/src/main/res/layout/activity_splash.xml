@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    
+    android:background="@color/background_white"
+    tools:context=".presentation.splash.SplashActivity">
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="@dimen/splash_text_horizontal_margin"
+        android:layout_marginTop="@dimen/splash_text_top_margin"
         android:fontFamily="@font/montserrat_semibold"
         android:text="@string/splash_title"
         android:textColor="@color/splash_title_color"
@@ -22,15 +23,18 @@
 
     <TextView
         android:id="@+id/tvSlogan"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="@dimen/splash_text_horizontal_margin"
+        android:layout_marginTop="@dimen/splash_title_subtitle_gap"
+        android:layout_marginEnd="@dimen/splash_text_horizontal_margin"
         android:fontFamily="@font/montserrat_regular"
         android:text="@string/splash_slogan"
         android:textColor="@color/splash_subtitle_color"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/tvTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
     <ImageView
         android:id="@+id/ivLogo"
@@ -40,6 +44,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        android:contentDescription="@string/splash_title"
         android:scaleType="fitCenter"
         android:src="@drawable/img_splash"
         app:layout_constraintBottom_toBottomOf="parent"

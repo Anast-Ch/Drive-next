@@ -1,6 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpOnboarding"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSkip"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/onboarding_skip_end_margin"
+        android:layout_marginTop="@dimen/onboarding_skip_top_margin"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:includeFontPadding="false"
+        android:textAllCaps="false"
+        android:text="@string/btn_skip"
+        android:textColor="@color/skip_button_text_color"
+        android:textSize="14sp"
+        app:rippleColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomBlock"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/onboarding_bottom_block_height"
+        android:layout_marginStart="@dimen/onboarding_bottom_block_horizontal_margin"
+        android:layout_marginEnd="@dimen/onboarding_bottom_block_horizontal_margin"
+        android:layout_marginTop="@dimen/onboarding_bottom_block_top_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/dotsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:id="@+id/dot1"
+                android:layout_width="@dimen/dot_width_active"
+                android:layout_height="@dimen/dot_height"
+                android:layout_marginEnd="@dimen/dot_spacing"
+                android:background="@drawable/dot_active" />
+
+            <View
+                android:id="@+id/dot2"
+                android:layout_width="@dimen/dot_width_inactive"
+                android:layout_height="@dimen/dot_height"
+                android:layout_marginEnd="@dimen/dot_spacing"
+                android:background="@drawable/dot_inactive" />
+
+            <View
+                android:id="@+id/dot3"
+                android:layout_width="@dimen/dot_width_inactive"
+                android:layout_height="@dimen/dot_height"
+                android:background="@drawable/dot_inactive" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/onboarding_button_height"
+            app:backgroundTint="@color/button_primary_background"
+            app:cornerRadius="@dimen/onboarding_button_radius"
+            app:rippleColor="@color/white"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="@dimen/onboarding_button_padding_horizontal"
+            android:paddingEnd="@dimen/onboarding_button_padding_horizontal"
+            android:fontFamily="@font/montserrat_semibold"
+            android:includeFontPadding="false"
+            android:text="@string/btn_next"
+            android:textAllCaps="false"
+            android:textColor="@color/button_primary_text"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
