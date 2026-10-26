@@ -7,7 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.myproject.R
-import com.example.myproject.presentation.common.dpToPx
 
 class OnboardingPageFragment : Fragment(R.layout.fragment_onboarding_page) {
 
@@ -59,7 +58,6 @@ class OnboardingPageFragment : Fragment(R.layout.fragment_onboarding_page) {
         tvTitle.text = title
         tvSubtitle.text = subtitle
 
-        val context = requireContext()
         val params = ivImage.layoutParams
 
         if (fillWidth) {
@@ -68,10 +66,14 @@ class OnboardingPageFragment : Fragment(R.layout.fragment_onboarding_page) {
             ivImage.scaleType = ImageView.ScaleType.FIT_CENTER
             ivImage.translationX = 0f
         } else {
-            params.width = context.dpToPx(imageWidthDp)
+            params.width = dpToPx(imageWidthDp)
             ivImage.layoutParams = params
             ivImage.scaleType = ImageView.ScaleType.FIT_CENTER
-            ivImage.translationX = context.dpToPx(imageOffsetDp).toFloat()
+            ivImage.translationX = dpToPx(imageOffsetDp).toFloat()
         }
+    }
+
+    private fun dpToPx(dp: Float): Int {
+        return (dp * resources.displayMetrics.density).toInt()
     }
 }

@@ -84,7 +84,6 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun finishOnboarding() {
-        // Защита от двойного нажатия
         btnNext.isEnabled = false
         btnSkip.isEnabled = false
 

@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.myproject.MainActivity
 import com.example.myproject.R
+import com.example.myproject.data.local.OnboardingPreferences
+import com.example.myproject.presentation.onboarding.OnboardingActivity
 
 class NoConnectionActivity : AppCompatActivity() {
 
@@ -38,7 +40,7 @@ class NoConnectionActivity : AppCompatActivity() {
 
         viewModel.connectionResult.observe(this) { isConnected ->
             if (isConnected) {
-                navigateToMain()
+                navigateNext()
             } else {
                 Toast.makeText(
                     this,
@@ -49,8 +51,16 @@ class NoConnectionActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToMain() {
-        val intent = Intent(this, MainActivity::class.java)
+    private fun navigateNext() {
+        val onboardingPreferences = OnboardingPreferences(this)
+        
+        val destination = if (onboardingPreferences.isOnboardingCompleted()) {
+            MainActivity::class.java
+        } else {
+            OnboardingActivity::class.java
+        }
+
+        val intent = Intent(this, destination)
         startActivity(intent)
         finish()
     }
