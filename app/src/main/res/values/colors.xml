@@ -11,4 +11,13 @@
     <color name="button_primary_background">#FF2A1246</color>
     <color name="button_primary_text">#FFFFFFFF</color>
     <color name="skip_button_text_color">#FF2A1246</color>
+
+    <color name="text_label_color">#FF344054</color>
+    <color name="text_secondary_color">#FF667085</color>
+    <color name="stroke_color">#FFD0D5DD</color>
+    <color name="error_color">#FFF04438</color>
+    <color name="text_heading_dark_color">#FF101828</color>
+    <color name="button_primary_disabled">#FFBFB8C8</color>
+    <color name="button_secondary_background">#FFFFFFFF</color>
+    <color name="button_secondary_text">#FF344054</color>
 </resources>

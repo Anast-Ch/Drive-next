@@ -16,4 +16,35 @@
     <string name="no_connection_subtitle">Проверьте подключение и повторите попытку</string>
     <string name="btn_retry">Повторить попытку</string>
     <string name="no_connection_still_offline">Подключение всё ещё отсутствует</string>
+
+    <string name="btn_login">Войти</string>
+    <string name="btn_register">Зарегистрироваться</string>
+
+    <string name="label_email">Электронная почта</string>
+    <string name="hint_email">Введите электронную почту</string>
+    <string name="label_password">Пароль</string>
+    <string name="hint_password">Введите пароль</string>
+    <string name="error_email_invalid">Введите корректный адрес электронной почты.</string>
+    <string name="cd_toggle_password">Показать или скрыть пароль</string>
+
+    <string name="login_title">Войдите в аккаунт</string>
+    <string name="login_subtitle">Пожалуйста, введите свои данные</string>
+    <string name="login_forgot_password">Забыли пароль?</string>
+    <string name="login_google">Войти через Google</string>
+    <string name="login_error_credentials">Неверный адрес электронной почты или пароль.</string>
+    <string name="login_google_success">Вход через Google выполнен (симуляция)</string>
+    <string name="login_forgot_stub">Восстановление пароля появится позже</string>
+
+    <string name="signup_title">Создать аккаунт</string>
+    <string name="cd_back">Назад</string>
+    <string name="label_password_create">Придумайте пароль</string>
+    <string name="label_password_repeat">Повторите пароль</string>
+    <string name="hint_password_repeat">Повторите пароль</string>
+    <string name="signup_agreement">Я согласен с условиями обслуживания и политикой конфиденциальности</string>
+    <string name="error_passwords_mismatch">Пароли не совпадают.</string>
+    <string name="error_password_short">Пароль должен содержать не менее 6 символов.</string>
+    <string name="error_agreement_required">Необходимо согласиться с условиями обслуживания и политикой конфиденциальности.</string>
+    <!-- Временная строка-->
+    <string name="signup_next_stub">Данные верны. Следующий экран появится на шаге 4</string>
+
 </resources>
