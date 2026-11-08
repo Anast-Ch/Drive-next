@@ -6,9 +6,9 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.example.myproject.MainActivity
 import com.example.myproject.R
 import com.example.myproject.data.local.OnboardingPreferences
+import com.example.myproject.presentation.auth.GettingStartedActivity
 
 class OnboardingActivity : AppCompatActivity() {
 
@@ -88,7 +88,8 @@ class OnboardingActivity : AppCompatActivity() {
         btnSkip.isEnabled = false
 
         onboardingPreferences.setOnboardingCompleted()
-        val intent = Intent(this, MainActivity::class.java)
+
+        val intent = Intent(this, GettingStartedActivity::class.java)
         startActivity(intent)
         finish()
     }
