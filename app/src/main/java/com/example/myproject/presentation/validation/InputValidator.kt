@@ -24,4 +24,9 @@ object InputValidator {
         val date = DateUtils.parse(text) ?: return false
         return !date.isAfter(LocalDate.now())
     }
+
+    fun isIssueDateValid(text: String): Boolean {
+        val date = DateUtils.parse(text) ?: return false
+        return !date.isAfter(LocalDate.now())
+    }
 }

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context=".presentation.registration.SignUpStep3Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/back_button_size"
+            android:layout_height="@dimen/back_button_size"
+            android:layout_marginStart="@dimen/back_button_margin"
+            android:layout_marginTop="@dimen/back_button_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_back"
+            android:padding="@dimen/back_button_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/header_title_side_margin"
+            android:layout_marginEnd="@dimen/header_title_side_margin"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/signup_title"
+            android:textAlignment="center"
+            android:textColor="@color/text_primary_color"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/cd_avatar"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnBack"
+            app:strokeColor="@color/stroke_color"
+            app:strokeWidth="1dp" />
+
+        <ImageView
+            android:id="@+id/ivAvatarAdd"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/cd_avatar_add"
+            android:src="@drawable/ic_avatar_plus"
+            app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+            app:layout_constraintEnd_toEndOf="@id/ivAvatar" />
+
+        <TextView
+            android:id="@+id/tvPhotoHint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/signup_photo_hint"
+            android:textColor="@color/text_primary_color"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAvatar" />
+
+        <TextView
+            android:id="@+id/tvLicenseNumberLabel"
+            style="@style/Widget.MyProject.FieldLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:labelFor="@id/etLicenseNumber"
+            android:text="@string/label_license_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPhotoHint" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLicenseNumber"
+            style="@style/Widget.MyProject.TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/field_label_gap"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLicenseNumberLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLicenseNumber"
+                style="@style/Widget.MyProject.TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:hint="@string/hint_license_number"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvIssueDateLabel"
+            style="@style/Widget.MyProject.FieldLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/field_block_gap"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:labelFor="@id/etIssueDate"
+            android:text="@string/label_issue_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilLicenseNumber" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilIssueDate"
+            style="@style/Widget.MyProject.TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/field_label_gap"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvIssueDateLabel"
+            app:startIconCheckable="false"
+            app:startIconContentDescription="@string/cd_pick_date"
+            app:startIconDrawable="@drawable/ic_calendar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etIssueDate"
+                style="@style/Widget.MyProject.TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/hint_date"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvLicensePhotoLabel"
+            style="@style/Widget.MyProject.FieldLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/field_block_gap"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:text="@string/label_license_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilIssueDate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUploadLicense"
+            style="@style/Widget.MyProject.Button.Secondary"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/field_label_gap"
+            android:contentDescription="@string/upload_photo"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            app:icon="@drawable/ic_upload"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:iconTint="@color/text_secondary_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLicensePhotoLabel"
+            app:strokeColor="@color/text_secondary_color" />
+
+        <TextView
+            android:id="@+id/tvLicensePhotoStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/upload_photo"
+            android:textColor="@color/text_secondary_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/btnUploadLicense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnUploadLicense"
+            app:layout_constraintTop_toTopOf="@id/btnUploadLicense" />
+
+        <TextView
+            android:id="@+id/tvPassportPhotoLabel"
+            style="@style/Widget.MyProject.FieldLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/field_block_gap"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:text="@string/label_passport_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnUploadLicense" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUploadPassport"
+            style="@style/Widget.MyProject.Button.Secondary"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/field_label_gap"
+            android:contentDescription="@string/upload_photo"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            app:icon="@drawable/ic_upload"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:iconTint="@color/text_secondary_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPassportPhotoLabel"
+            app:strokeColor="@color/text_secondary_color" />
+
+        <TextView
+            android:id="@+id/tvPassportPhotoStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/upload_photo"
+            android:textColor="@color/text_secondary_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/btnUploadPassport"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnUploadPassport"
+            app:layout_constraintTop_toTopOf="@id/btnUploadPassport" />
+
+        <TextView
+            android:id="@+id/tvFormError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:accessibilityLiveRegion="polite"
+            android:text="@string/error_required_fields"
+            android:textAppearance="@style/TextAppearance.MyProject.Error"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnUploadPassport"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvPhotosError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:accessibilityLiveRegion="polite"
+            android:text="@string/error_photos_required"
+            android:textAppearance="@style/TextAppearance.MyProject.Error"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFormError"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="@style/Widget.MyProject.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_form"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/auth_section_gap"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:layout_marginBottom="@dimen/button_bottom_margin"
+            android:enabled="false"
+            android:text="@string/btn_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPhotosError"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,6 +1,7 @@
 package com.example.myproject.presentation.registration
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.MotionEvent
@@ -326,14 +327,10 @@ class SignUpStep2Activity : AppCompatActivity() {
     }
 
     private fun openNextStep() {
-        // SignUpStep3Activity будет создана на следующем шаге.
-        // Тогда здесь появится startActivity без finish().
-        // На MainActivity с этого экрана не переходим.
-        Toast.makeText(
-            this,
-            R.string.signup2_next_stub,
-            Toast.LENGTH_SHORT
-        ).show()
+        val email = intent.getStringExtra(EXTRA_EMAIL).orEmpty()
+        val nextIntent = Intent(this, SignUpStep3Activity::class.java)
+            .putExtra(SignUpStep3Activity.EXTRA_EMAIL, email)
+        startActivity(nextIntent)
     }
 
     private fun showError(layout: TextInputLayout, message: String) {

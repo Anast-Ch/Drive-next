@@ -66,8 +66,23 @@
     <string name="error_required_fields">Пожалуйста, заполните все обязательные поля.</string>
     <string name="error_birth_date_invalid">Введите корректную дату рождения.</string>
 
-    <!-- Временная заглушка до создания SignUpStep3Activity -->
-    <string name="signup2_next_stub">Данные верны. Следующий экран появится на шаге 5</string>
-
+    <string name="signup_photo_hint">Добавление фотографии поможет владельцам и арендаторам узнать друг друга, когда они будут забирать машину</string>
+    <string name="label_license_number">Номер водительского удостоверения</string>
+    <string name="hint_license_number">0000000000</string>
+    <string name="label_issue_date">Дата выдачи</string>
+    <string name="signup_issue_date_picker_title">Дата выдачи</string>
+    <string name="label_license_photo">Загрузите фото водительского удостоверения</string>
+    <string name="label_passport_photo">Загрузите фото паспорта</string>
+    <string name="upload_photo">Загрузить фото</string>
+    <string name="photo_uploaded">Фото загружено ✓</string>
+    <string name="photo_source_title">Выберите источник фото</string>
+    <string name="photo_source_gallery">Галерея</string>
+    <string name="photo_source_camera">Камера</string>
+    <string name="cd_avatar">Фото профиля</string>
+    <string name="cd_avatar_add">Добавить фото профиля</string>
+    <string name="error_issue_date_invalid">Введите корректную дату выдачи.</string>
+    <string name="error_photos_required">Пожалуйста, загрузите все необходимые фото.</string>
+    <!-- Временная заглушка до создания экрана «Успешная регистрация» -->
+    <string name="signup3_next_stub">Данные верны. Экран «Успешная регистрация» появится на следующем шаге</string>
 
 </resources>
