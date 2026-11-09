@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context=".presentation.registration.CongratulationsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/congrats_title"
+            android:textAlignment="center"
+            android:textColor="@color/text_heading_dark_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/contentBlock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/btnNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintVertical_bias="0.5">
+
+            <ImageView
+                android:id="@+id/ivSuccess"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="@string/cd_success"
+                android:src="@drawable/ic_check_circle" />
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/congrats_heading"
+                android:textAlignment="center"
+                android:textColor="@color/text_primary_color"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/congrats_message"
+                android:textAlignment="center"
+                android:textColor="@color/text_primary_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="@style/Widget.MyProject.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_form"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:layout_marginBottom="@dimen/button_bottom_margin"
+            android:text="@string/btn_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -82,7 +82,10 @@
     <string name="cd_avatar_add">Добавить фото профиля</string>
     <string name="error_issue_date_invalid">Введите корректную дату выдачи.</string>
     <string name="error_photos_required">Пожалуйста, загрузите все необходимые фото.</string>
-    <!-- Временная заглушка до создания экрана «Успешная регистрация» -->
-    <string name="signup3_next_stub">Данные верны. Экран «Успешная регистрация» появится на следующем шаге</string>
+
+    <string name="congrats_title">Пользуйтесь с удовольствием</string>
+    <string name="congrats_heading">Поздравляем</string>
+    <string name="congrats_message">Вы успешно зарегистрировались. Обработка ваших персональных данных займет около двух часов. Спасибо за ожидание.</string>
+    <string name="cd_success">Регистрация успешна</string>
 
 </resources>

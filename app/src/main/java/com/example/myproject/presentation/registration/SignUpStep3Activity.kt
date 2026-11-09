@@ -3,6 +3,7 @@ package com.example.myproject.presentation.registration
 import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.res.ColorStateList
+import android.content.Intent
 import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Bundle
@@ -11,7 +12,6 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -488,11 +488,9 @@ class SignUpStep3Activity : AppCompatActivity() {
     }
 
     private fun openNextStep() {
-        Toast.makeText(
-            this,
-            R.string.signup3_next_stub,
-            Toast.LENGTH_SHORT
-        ).show()
+        val nextIntent = Intent(this, CongratulationsActivity::class.java)
+            .putExtra(CongratulationsActivity.EXTRA_EMAIL, email)
+        startActivity(nextIntent)
     }
 
     private fun showError(layout: TextInputLayout, message: String) {
