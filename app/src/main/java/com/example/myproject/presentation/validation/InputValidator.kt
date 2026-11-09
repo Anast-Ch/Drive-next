@@ -1,10 +1,12 @@
 package com.example.myproject.presentation.validation
 
+import com.example.myproject.presentation.util.DateUtils
+import java.time.LocalDate
+
 object InputValidator {
 
     const val MIN_PASSWORD_LENGTH = 6
 
-    // name@domain.com или name@domain.ru
     private val EMAIL_REGEX = Regex(
         "[A-Za-z0-9._%+\\-]+@[A-Za-z0-9\\-]+(\\.[A-Za-z0-9\\-]+)*\\.(com|ru)",
         RegexOption.IGNORE_CASE
@@ -16,5 +18,10 @@ object InputValidator {
 
     fun isPasswordLongEnough(password: String): Boolean {
         return password.length >= MIN_PASSWORD_LENGTH
+    }
+
+    fun isBirthDateValid(text: String): Boolean {
+        val date = DateUtils.parse(text) ?: return false
+        return !date.isAfter(LocalDate.now())
     }
 }

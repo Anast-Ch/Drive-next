@@ -72,4 +72,6 @@
     <dimen name="checkbox_size">20dp</dimen>
     <dimen name="signup_checkbox_top_margin">32dp</dimen>
     <dimen name="checkbox_text_gap">8dp</dimen>
+
+    <dimen name="signup_step2_form_top_margin">20dp</dimen>
 </resources>

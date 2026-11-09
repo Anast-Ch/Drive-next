@@ -44,7 +44,30 @@
     <string name="error_passwords_mismatch">Пароли не совпадают.</string>
     <string name="error_password_short">Пароль должен содержать не менее 6 символов.</string>
     <string name="error_agreement_required">Необходимо согласиться с условиями обслуживания и политикой конфиденциальности.</string>
-    <!-- Временная строка-->
-    <string name="signup_next_stub">Данные верны. Следующий экран появится на шаге 4</string>
+
+    <string name="label_last_name">Фамилия</string>
+    <string name="hint_last_name">Введите фамилию</string>
+
+    <string name="label_first_name">Имя</string>
+    <string name="hint_first_name">Введите имя</string>
+
+    <string name="label_middle_name">Отчество</string>
+    <string name="hint_middle_name">Введите отчество</string>
+
+    <string name="label_birth_date">Дата рождения</string>
+    <string name="hint_date">DD/MM/YYYY</string>
+    <string name="cd_pick_date">Выбрать дату</string>
+    <string name="signup_birth_date_picker_title">Дата рождения</string>
+
+    <string name="label_gender">Пол</string>
+    <string name="gender_male">Мужской</string>
+    <string name="gender_female">Женский</string>
+
+    <string name="error_required_fields">Пожалуйста, заполните все обязательные поля.</string>
+    <string name="error_birth_date_invalid">Введите корректную дату рождения.</string>
+
+    <!-- Временная заглушка до создания SignUpStep3Activity -->
+    <string name="signup2_next_stub">Данные верны. Следующий экран появится на шаге 5</string>
+
 
 </resources>

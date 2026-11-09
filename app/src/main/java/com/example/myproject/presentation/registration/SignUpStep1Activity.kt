@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +14,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.core.widget.doAfterTextChanged
+import android.content.Intent
 import com.example.myproject.R
 import com.example.myproject.presentation.validation.InputValidator
 import com.google.android.material.button.MaterialButton
@@ -112,7 +112,6 @@ class SignUpStep1Activity : AppCompatActivity() {
 
         etPassword.onRealTextChange {
             clearError(tilPassword)
-            // Пароль поменялся — старая ошибка «не совпадают» уже неактуальна
             clearError(tilRepeatPassword)
         }
 
@@ -127,8 +126,6 @@ class SignUpStep1Activity : AppCompatActivity() {
         }
     }
 
-    // Вызывает action, только если текст ДЕЙСТВИТЕЛЬНО изменился.
-    // Смена глаза у пароля тоже дёргает слушатель, но текст при этом тот же.
     private fun TextInputEditText.onRealTextChange(action: () -> Unit) {
         var lastText = text?.toString().orEmpty()
         doAfterTextChanged { editable ->
@@ -186,9 +183,12 @@ class SignUpStep1Activity : AppCompatActivity() {
     }
 
     private fun openNextStep() {
-        // Заглушка до шага 4, когда появится SignUpStep2Activity.
-        // Там будет startActivity БЕЗ finish(): так данные этого экрана сохранятся при возврате.
-        Toast.makeText(this, R.string.signup_next_stub, Toast.LENGTH_SHORT).show()
+        val email = etEmail.text?.toString().orEmpty().trim()
+
+        val intent = Intent(this, SignUpStep2Activity::class.java)
+            .putExtra(SignUpStep2Activity.EXTRA_EMAIL, email)
+
+        startActivity(intent)
     }
 
     private fun showError(layout: TextInputLayout, message: String) {
